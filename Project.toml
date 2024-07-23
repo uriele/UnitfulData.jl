@@ -1,0 +1,13 @@
+name = "DataUnitful"
+uuid = "0c31c58b-394b-40f3-9cc7-10e20ee2bd7a"
+authors = ["Marco Menarini"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
