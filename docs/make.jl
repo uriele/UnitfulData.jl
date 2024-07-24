@@ -1,14 +1,14 @@
-using DataUnitful
+using UnitfulData
 using Documenter
 
-DocMeta.setdocmeta!(DataUnitful, :DocTestSetup, :(using DataUnitful); recursive=true)
+DocMeta.setdocmeta!(UnitfulData, :DocTestSetup, :(using UnitfulData); recursive=true)
 
 makedocs(;
-    modules=[DataUnitful],
+    modules=[UnitfulData],
     authors="Marco Menarini",
-    sitename="DataUnitful.jl",
+    sitename="UnitfulData.jl",
     format=Documenter.HTML(;
-        canonical="https://uriele.github.io/DataUnitful.jl",
+        canonical="https://uriele.github.io/UnitfulData.jl",
         edit_link="master",
         assets=String[],
     ),
@@ -18,6 +18,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/uriele/DataUnitful.jl",
+    repo="github.com/uriele/UnitfulData.jl",
     devbranch="master",
 )

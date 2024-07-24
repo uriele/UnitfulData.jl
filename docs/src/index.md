@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = DataUnitful
+CurrentModule = UnitfulData
 ```
 
-# DataUnitful
+# UnitfulData
 
-Documentation for [DataUnitful](https://github.com/uriele/DataUnitful.jl).
+Documentation for [UnitfulData](https://github.com/uriele/UnitfulData.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [DataUnitful]
+Modules = [UnitfulData]
 ```
