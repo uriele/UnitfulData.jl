@@ -1,3 +1,12 @@
+"""
+    const prefixed_data
+
+A dictionary that contains the most common prefixes for unit of Information in metric and IEC format.
+
+The keys of the dictionary are tuples of the form `(n, b)`, where `n` is the exponent and `b` is the base.
+The values of the dictionary are strings representing the corresponding prefixes.
+
+"""
 const prefixed_data = Dict(
     (3,10) => "k",
     (6,10) => "M",
