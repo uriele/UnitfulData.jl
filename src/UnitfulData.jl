@@ -1,7 +1,7 @@
 module UnitfulData
     import Unitful 
     using Unitful: @u_str, @unit, @dimension, @derived_dimension,𝐓,s,uconvert,Unitlike
-    using Unitful: dimension,basefactor,unit,Unit,@refunit,@unit_symbols,abbr,Unit,basefactors_expr, FreeUnits
+    using Unitful: dimension,basefactor,unit,Unit,@refunit,@unit_symbols,abbr,basefactors_expr, FreeUnits
     using Base: @__doc__, gc_bytes, summarysize
     import Base.Experimental
     export @u_str, @unit, @unit_custom_prefix, prefixed_data,abbr,Unitlike

@@ -2,9 +2,8 @@
 
 The Functions and Macros exported by the package:
 
-```@autodocs
+```@autodocs; canonical=false
 Modules = [UnitfulData]
-Order   = [:constant, :function, :macro]
 Pages   = ["utils.jl", "macro.jl"]
-
+Private = false
 ```

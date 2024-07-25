@@ -3,8 +3,8 @@
 The units exported by the package.
 
 
-```@autodocs
+```@autodocs; canonical=false
 Modules = [UnitfulData]
+Private = false
 Pages   = ["units.jl"]
-
 ```

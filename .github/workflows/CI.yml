@@ -43,7 +43,7 @@ jobs:
       - uses: codecov/codecov-action@v4
         with:
           files: lcov.info
-          token: ${{ secrets.CODECOV_TOKEN }}
+         # token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: false
   docs:
     name: Documentation
@@ -68,7 +68,7 @@ jobs:
       - uses: julia-actions/julia-docdeploy@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
+         # DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
       - name: Run doctests
         shell: julia --project=docs --color=yes {0}
         run: |

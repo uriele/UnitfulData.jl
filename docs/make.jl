@@ -29,11 +29,10 @@ makedocs(;
             "Units" => "units.md",
             "Functions and Macros"=> "functions.md"],
         "release-notes.md",
-        hide("fulllist.md"),
     ],
     plugins=[links],
     warnonly = ("strict=false" in ARGS),
-    doctest = ("doctest=only" in ARGS) ? :only : true,
+ #   doctest = ("doctest=only" in ARGS) ? :only : true,
 )
 
 deploydocs(;
