@@ -2,11 +2,13 @@
 
 The Functions and Macros exported by the package:
 
-```@doc
-prefixed_data
+```@autodocs
+Modules = [UnitfulData]
+Order = [:constant]
+Filter = t -> t == prefixed_data
 ```
 ```@autodocs; canonical=false
 Modules = [UnitfulData]
-Order   = [:function, :macro,]
+Order   = [:function, :macro]
 Private = false
 ```
