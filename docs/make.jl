@@ -25,10 +25,11 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Manual" => Any[
+        "Package Guide" => "guide.md",
+        "Package Content" => Any[
             "Units" => "units.md",
             "Functions and Macros"=> "functions.md"],
-        "release-notes.md",
+        "Changelog"=>"release-notes.md",
     ],
     checkdocs = :export,
     plugins=[links],
