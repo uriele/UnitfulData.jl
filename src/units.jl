@@ -41,12 +41,15 @@
 @unit_custom_prefix Byte "Byte" Bytes prefixed_data true
 
 
+@derived_dimension DataRate Data*𝐓^-1 true
+
 """
     $(@__MODULE__).DataRate
 
 A dimension representing data transfer rate.
 """
-@derived_dimension DataRate Data*𝐓^-1 true
+
+
 
 """
  $(@__MODULE__).sh
