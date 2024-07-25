@@ -86,7 +86,7 @@
     - [`$(@__MODULE__).Data`](@ref)
     - [`$(@__MODULE__).bit`](@ref)
     - [`$(@__MODULE__).Hart`](@ref)
-    - [`$(@__MODULE__).shannon`](@ref)
+    - [`$(@__MODULE__).sh`](@ref)
 """
 @unit nat "nat" Nat (1/log(2))*sh true true
 

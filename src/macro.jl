@@ -37,7 +37,7 @@ julia> @unit utest "utest" uTests 1bit false
 utest
 julia> @unit_custom_prefix utest "utest" uTest _prefix=Dict((2,10)=>"hecto")
 
-See also: [`@unit`](@ref), [`@unit_symbols`](@ref)
+See also: [`Unitful.@unit`](@extref)
 """
 macro unit_custom_prefix(symb,abbr,name, _prefix,autodocs=false)
     expr = Expr(:block)
@@ -93,7 +93,7 @@ A macro to evaluate an expression, discarding the resulting value, instead retur
 total size of the allocated memory in a unit of `UnitfulData.Byte`. If `unit` is specified, 
 the result is converted to that unit. By default, the result is in Bytes.
 
-See also [`@allocations`](@ref), [`data_summary`](@ref)
+See also [`Base.@allocations`](@extref), [`data_summary`](@ref)
 
 ```julia-repl
 julia> @data_allocated rand(10^6) MByte

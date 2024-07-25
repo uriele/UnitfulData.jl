@@ -4,7 +4,7 @@
 Wrapper around `Base.summarysize` that returns the size of the data in the specified unit.
 If `unit` is not a `Data` unit, it defaults to `Byte`.
 
-See also: [`@data_allocated`](@ref), [`Base.summarysize`](@ref)
+See also: [`@data_allocated`](@ref), [`Base.summarysize`](@extref)
 """
 function data_summary(ex; unit::Unitlike=Byte, 
     exclude = Union{DataType, Core.TypeName, Core.MethodInstance},
