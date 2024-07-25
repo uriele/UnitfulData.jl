@@ -31,7 +31,7 @@ A dimension representing Information either as Storage, Memory, or Entropy.
 
 * [`sh`](@ref) : the shannon is the unit of information content associated with and event occuring with probability 1/2. 
 
-* [`Hast`](@ref) : the hartley is a unit of information and entropy on base 10
+* [`Hart`](@ref) : the hartley is a unit of information and entropy on base 10
 
 * [`nat`] : the natural unit of information is a unit of information and entropy based on the natural logarithms
 
@@ -56,6 +56,6 @@ A derived dimension that represate the unit of Information passing through a cha
 
 - [`@unit_custom_prefix`](@ref)
 - [`@data_allocated`](@ref)
-- [`data_summery`](@ref)
+- [`data_summary`](@ref)
 
 
