@@ -82,6 +82,7 @@ val= 1234.2
     @testset "Unit Correctness" begin
         for (unit, value) in test_units
             @test value*bit == 1eval(Symbol(unit,"bit"))
+            @test value*Byte == 1eval(Symbol(unit,"Byte"))
         end
     end
 

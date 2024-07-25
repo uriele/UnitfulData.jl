@@ -23,6 +23,7 @@
     - [`$(@__MODULE__).Byte`](@ref)
 """
 @refunit bit "bit" Bits Data false 
+@unit_custom_prefix bit "bit" Bits prefixed_data true
 
 
 """
@@ -37,6 +38,7 @@
     - [`$(@__MODULE__).bit`](@ref)
 """
 @unit Byte "Byte" Bytes 8*bit false 
+@unit_custom_prefix Byte "Byte" Bytes prefixed_data true
 
 @derived_dimension DataRate Data*𝐓^-1 true
 
@@ -104,6 +106,7 @@
     - [`$(@__MODULE__).Bps`](@ref)
 """
 @unit bps "bps" Bits_Per_Seconds 1*bit/s false
+@unit_custom_prefix bps "bps" Bits_Per_Seconds prefixed_data true
 
 
 """
@@ -118,13 +121,10 @@
     - [`$(@__MODULE__).bps`](@ref)
 """
 @unit Bps "Bps" Bytes_Per_Seconds 1*Byte/s false
+@unit_custom_prefix Bps "Bps" Bytes_Per_Seconds prefixed_data true
 
 #To Do: Add Quantum Information Units, need an @expscale and @expunit macro similar to @logscale and @logunit
 
-@unit_custom_prefix bit "bit" Bits prefixed_data true
-@unit_custom_prefix Byte "Byte" Bytes prefixed_data true
-@unit_custom_prefix bps "bps" Bits_Per_Seconds prefixed_data true
-@unit_custom_prefix Bps "Bps" Bytes_Per_Seconds prefixed_data true
 
 
 # Arcaic and Unusual Units

@@ -2,10 +2,14 @@ using UnitfulData
 using Documenter
 using DocumenterInterLinks
 
+include("./changelog.jl") # Include the changelog
+
 links= InterLinks(
     "Unitful" => "https://painterqubits.github.io/Unitful.jl/stable/",
     "Julia" =>     "https://docs.julialang.org/en/v1/"
 )
+
+
 
 DocMeta.setdocmeta!(UnitfulData, :DocTestSetup, :(using UnitfulData); recursive=true)
 
@@ -21,8 +25,15 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Manual" => Any[
+            "Units" => "units.md",
+            "Functions and Macros"=> "functions.md",
+            ]
+        "release-notes.md",
     ],
     plugins=[links],
+    warnonly = ("strict=false" in ARGS),
+    doctest = ("doctest=only" in ARGS) ? :only : true,
 )
 
 deploydocs(;

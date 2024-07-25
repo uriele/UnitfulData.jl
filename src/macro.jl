@@ -32,14 +32,17 @@ const prefixed_data = Dict(
 A macro to create prefixed units. The macro creates a unit with the specified symbol, abbreviation, and name.
 The unit is prefixed by the values in `_prefix`. If `autodocs` is true, the macro will generate a docstring for the unit.
 
-```julia-repl
+```jldoctest
 julia> @unit utest "utest" uTests 1bit false
 utest
-julia> @unit_custom_prefix utest "utest" uTest _prefix=Dict((2,10)=>"hecto")
 
+julia> @unit_custom_prefix utest "utest" uTest _prefix=Dict((2,10)=>"hecto")
+hectotest
+
+````
 See also: [`Unitful.@unit`](@extref)
 """
-macro unit_custom_prefix(symb,abbr,name, _prefix,autodocs=false)
+macro unit_custom_prefix(symb,abbr,name, _prefix=prefixed_data,autodocs=false)
     expr = Expr(:block)
     basefactor = (1.0, 1)
     n=Meta.quot(Symbol(name))
@@ -47,8 +50,9 @@ macro unit_custom_prefix(symb,abbr,name, _prefix,autodocs=false)
 
     for ((k,kbase), value) in eval(_prefix)
         symb_i= Symbol(string(value, symb))
+
         name_i= Meta.quot(Symbol(value, name))
-        
+        @debug symb_i name_i
         abbr_i = string(value, abbr)
         scale_i = eval(:($float($kbase)^($k)))
         scalefactor_i = :($scale_i * $symb)
@@ -95,7 +99,7 @@ the result is converted to that unit. By default, the result is in Bytes.
 
 See also [`Base.@allocations`](@extref), [`data_summary`](@ref)
 
-```julia-repl
+```jldoctest
 julia> @data_allocated rand(10^6) MByte
 8.000080 MBytes
 ```
