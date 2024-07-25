@@ -18,7 +18,7 @@ julia> using UnitfulData
 
 ## Adding More Units and Custom Prefixes
 
-To add more units, the current package export the base [`@unit`](@extref) macro for the [`Unitful.jl`](https://github.com/keno/Unitful.jl) package. To create a new unit and extend them using a custom prefix -- different from the default power-of-ten prefix provided by the package or to just using a subset of it -- you can use the macro [`@unit_custom_prefix`]@(ref).
+To add more units, the current package export the base [`@unit`](@extref `Unitful.@unit`) macro for the [`Unitful.jl`](https://github.com/keno/Unitful.jl) package. To create a new unit and extend them using a custom prefix -- different from the default power-of-ten prefix provided by the package or to just using a subset of it -- you can use the macro [`@unit_custom_prefix`]@(ref).
 ```@meta
 DocTestSetup = quote
     using Unitful

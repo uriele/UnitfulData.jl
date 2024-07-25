@@ -45,12 +45,12 @@ A derived dimension that represate the unit of Information passing through a cha
 
 ## From `Unitful`
 
-- [`@u_str`](@extref)
-- [`@unit`](@extref)
-- [`dimension`](@extref)
-- [`uconvert`](@extref)
-- [`ustrip`](@extref)
-- [`upreferred`](@extref)
+- [`@u_str`](@extref `Unitful.@u_str`)
+- [`@unit`](@extref `Unitful.@unit`)
+- [`dimension`](@extref `Unitful.dimension`)
+- [`uconvert`](@extref `Unitful.uconvert`)
+- [`ustrip`](@extref `Unitful.ustrip`)
+- [`upreferred`](@extref `Unitful.upreferred`)
 
 ## From `UnitfulData`
 
