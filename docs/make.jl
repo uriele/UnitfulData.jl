@@ -30,6 +30,7 @@ makedocs(;
             "Functions and Macros"=> "functions.md"],
         "release-notes.md",
     ],
+    checkdocs = :export,
     plugins=[links],
     warnonly = ("strict=false" in ARGS),
  #   doctest = ("doctest=only" in ARGS) ? :only : true,
