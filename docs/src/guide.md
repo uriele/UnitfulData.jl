@@ -1,16 +1,17 @@
 # Package Guide
 
-UnitfulData is designed to expand the package Unitful to the most common units of Information and Information rate. It can also be used to easily identify the size of objects and files in the correct unit for development and profiling purposes.
+UnitfulData is designed to expand the package Unitful to the most common Information and Information rate units. It can also easily identify the size of objects and files in the correct unit for development and profiling purposes.
+Quick start
 
 ## Quick start
 
-UnitfulData can be installed using the Julia package manager. From Julia REPL, type `]` to enter the Pkg REPL mode and run
+You can install UnitfulData using the Julia package manager. From Julia REPL, type ] to enter the Pkg REPL mode and run
 
 ```
 pkg> add UnitfulData
 ```
 
-To load the package in your enviroment you can run in the Julia REPL:
+To load the package in your environment, you can run in the Julia REPL:
 
 ```
 julia> using UnitfulData
@@ -18,7 +19,7 @@ julia> using UnitfulData
 
 ## Adding More Units and Custom Prefixes
 
-To add more units, the current package export the base [`@unit`](@extref `Unitful.@unit`) macro for the [`Unitful.jl`](https://github.com/keno/Unitful.jl) package. To create a new unit and extend them using a custom prefix -- different from the default power-of-ten prefix provided by the package or to just using a subset of it -- you can use the macro [`@unit_custom_prefix`]@(ref).
+The current package exports the base  [`@unit`](@extref `Unitful.@unit`) macro from the [`Unitful.jl`](https://github.com/keno/Unitful.jl) package to add more units. To create a new unit and extend it using a custom prefix -- different from the Unitful's default power-of-ten prefix or just using a subset of it -- you can use the macro [`@unit_custom_prefix`]@(ref).
 ```@meta
 DocTestSetup = quote
     using Unitful
@@ -41,10 +42,10 @@ true
 ```
 
 !!! note 
-    If the macro `@unit_custom_prefix` is provided without a prefix, it will use the default `prefix_data` constant provided by the package, that includes the positive power-of-tens up to `Yotta` (10^24) and the power-of-twos up to 80 `Yi` (2^80).
 
+    If the macro `@unit_custom_prefix` is provided without a prefix, it will use the default `prefix_data` constant, which includes the positive power-of-tens up to `Yotta` (10^24) and the power-of-twos up to 80 `Yi` (2^80).
 
-To add new units to a precompiled package, you will need to add at the end of your package and **after** all the new units and dimention have been created an initialization function to register the new units with unitful
+To add new units to a precompiled package, you will need to add, at the end of your package and after all the new units and dimensions, an initialization function to register the new units with Unitful
 
 ```julia
     const localunits = copy(Unitful.basefactors)
@@ -72,7 +73,7 @@ julia> data_summary(aa; unit=bit, exclude=Array) # size of the object itself in 
 128 bit
 ```
 
-Similarly, to check the memory allocated during the execution of an expression you can use [`@data_allocated](@ref)
+Similarly, to check the memory allocated during the execution of an expression, you can use [`@data_allocated](@ref)
 
 ```julia-repl
 julia> @data_allocated tests(1,b) bit # memory allocated in bits
@@ -83,4 +84,4 @@ julia> @data_allocated tests(1,c) nat # memory allocated in natural units
 ```
 
 !!! note
-    If no second term is provided to the macro, the result will be showed in Bytes
+    If no second term is provided to the macro, the result will be shown in Bytes
