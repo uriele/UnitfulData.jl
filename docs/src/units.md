@@ -5,7 +5,13 @@
 ```@autodocs; canonical=false
 Modules = [UnitfulData]
 Order = [:type]
+```
+
+```@autodocs; canonical=false
+Modules = [UnitfulData]
+Order= [:constant]
 Private = false
+Filter = t-> t == prefixed_data
 ```
 
 ## Not exported
@@ -13,7 +19,7 @@ Private = false
 
 ```@autodocs; canonical=false
 Modules = [UnitfulData]
-Order = [:type]
+Order = [:constant]
 Private = true
 Public = false
 ```

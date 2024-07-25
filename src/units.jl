@@ -17,12 +17,7 @@
 
  Dimension: Data
 
- See also: 
-    - [`Data`](@ref)
-    - [`sh`](@ref)
-    - [`Hart`](@ref)
-    - [`nat`](@ref)
-    - [`Byte`](@ref)
+ See also: [`Data`]((@ref) , [`sh`]((@ref) , [`Hart`]((@ref) , [`nat`]((@ref) , [`Byte`](@ref)
 """
 @refunit bit "bit" Bits Data false 
 @unit_custom_prefix bit "bit" Bits prefixed_data true
@@ -35,9 +30,7 @@
 
  Dimension: Data
 
- See also: 
-    - [`Data`](@ref)
-    - [`bit`](@ref)
+ See also: [`Data`]((@ref) , [`bit`](@ref)
 """
 @unit Byte "Byte" Bytes 8*bit false 
 @unit_custom_prefix Byte "Byte" Bytes prefixed_data true
@@ -54,11 +47,7 @@
 
  Dimension: Data
 
- See also: 
-    - [`Data`](@ref)
-    - [`bit`](@ref)
-    - [`Hart`](@ref)
-    - [`nat`](@ref)
+ See also: [`Data`]((@ref) , [`bit`]((@ref) , [`Hart`]((@ref) , [`nat`](@ref)
 """
 @unit sh "sh" Shannon 1*bit true true
 
@@ -72,11 +61,7 @@
  
  Dimension: Data
 
- See also: 
-    - [`Data`](@ref)
-    - [`bit`](@ref)
-    - [`Hart`](@ref)
-    - [`nat`](@ref)
+ See also: [`Data`]((@ref) , [`bit`]((@ref) , [`Hart`]((@ref) , [`nat`](@ref)
 """
 @unit Hart "Hart" Hartley log2(10)*sh true true
 
@@ -88,11 +73,7 @@
  
  Dimension: Data
 
- See also: 
-    - [`Data`](@ref)
-    - [`bit`](@ref)
-    - [`Hart`](@ref)
-    - [`sh`](@ref)
+ See also: [`Data`]((@ref) , [`bit`]((@ref) , [`Hart`]((@ref) , [`sh`](@ref)
 """
 @unit nat "nat" Nat (1/log(2))*sh true true
 
@@ -105,9 +86,7 @@
  
  Dimension: DataRate
 
- See also: 
-    - [`DataRate`](@ref)
-    - [`Bps`](@ref)
+ See also: [`DataRate`]((@ref) , [`Bps`](@ref)
 """
 @unit bps "bps" Bits_Per_Seconds 1*bit/s false
 @unit_custom_prefix bps "bps" Bits_Per_Seconds prefixed_data true
@@ -120,9 +99,7 @@
  
  Dimension: DataRate
 
- See also: 
-    - [`DataRate`](@ref)
-    - [`bps`](@ref)
+ See also: [`DataRate`]((@ref) , [`bps`](@ref)
 """
 @unit Bps "Bps" Bytes_Per_Seconds 1*Byte/s false
 @unit_custom_prefix Bps "Bps" Bytes_Per_Seconds prefixed_data true
@@ -139,10 +116,7 @@
 
     Dimension: Data
 
-    See also: 
-        - [`Data`](@ref)
-        - [`dit`](@ref)
-        - [`nybl`](@ref)
+    See also: [`Data`]((@ref) , [`dit`]((@ref) , [`nybl`](@ref)
 """
 @unit trit "trit" Trits _log2_3*bit true true
 
@@ -153,10 +127,7 @@
     
     Dimension: Data
     
-    See also: 
-        - [`Data`](@ref)
-        - [`dibit`](@ref)
-        - [`nybl`](@ref)
+    See also: [`Data`]((@ref) , [`dibit`]((@ref) , [`nybl`](@ref)
     
 """
 @unit tribit "tribit" Tribits 3*bit true true
@@ -168,10 +139,7 @@
     
     Dimension: Data
     
-    See also: 
-        - [`Data`](@ref)
-        - [`tribit`](@ref)
-        - [`nybl`](@ref)
+    See also: [`Data`]((@ref) , [`tribit`]((@ref) , [`nybl`](@ref)
     
 """
 @unit dibit "dibit" Dibits 2*bit true true
@@ -185,10 +153,7 @@
     
     Dimension: Data
     
-    See also: 
-        - [`Data`](@ref)
-        - [`dibit`](@ref)
-        - [`tribit`](@ref)
+    See also: [`Data`]((@ref) , [`dibit`]((@ref) , [`tribit`](@ref)
     
 """
 @unit nybl "nybl" Nibbles 4*bit true true

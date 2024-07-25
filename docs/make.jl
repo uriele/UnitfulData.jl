@@ -33,7 +33,7 @@ makedocs(;
     checkdocs = :export,
     plugins=[links],
     warnonly = ("strict=false" in ARGS),
- #   doctest = ("doctest=only" in ARGS) ? :only : true,
+   doctest = ("doctest=only" in ARGS) ? :only : true,
 )
 
 deploydocs(;
