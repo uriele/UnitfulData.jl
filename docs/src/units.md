@@ -1,10 +1,19 @@
 # Units
 
-The units exported by the package.
+## Exported
+
+```@autodocs; canonical=false
+Modules = [UnitfulData]
+Order = [:type]
+Private = false
+```
+
+## Not exported
 
 
 ```@autodocs; canonical=false
 Modules = [UnitfulData]
-Private = false
-Pages   = ["units.jl"]
+Order = [:type]
+Private = true
+Public = false
 ```
