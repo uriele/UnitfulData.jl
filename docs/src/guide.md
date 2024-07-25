@@ -42,7 +42,6 @@ true
 ```
 
 !!! note 
-
     If the macro `@unit_custom_prefix` is provided without a prefix, it will use the default `prefix_data` constant, which includes the positive power-of-tens up to `Yotta` (10^24) and the power-of-twos up to 80 `Yi` (2^80).
 
 To add new units to a precompiled package, you will need to add, at the end of your package and after all the new units and dimensions, an initialization function to register the new units with Unitful
