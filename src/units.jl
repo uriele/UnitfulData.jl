@@ -141,6 +141,7 @@
         - [`$(@__MODULE__).nybl`](@ref)
 """
 @unit trit "trit" Trits _log2_3*bit true true
+
 """
     $(@__MODULE__).tribit
     
