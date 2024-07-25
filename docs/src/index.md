@@ -12,7 +12,7 @@ UnitfulData.jl is an extension for [Unitful.jl](https://github.com/PainterQubits
 
 The extension also includes the exported macro [`@unit_custom_prefix`](@ref) that allows the generation of prefixed units for a general unit using a custom base and exponents and the constant [`prefixed_data`](@ref) containing the most common units in metric (base 10) and IEC (binary) format.
 
-The [`Package Guide`] provides a tutorial explaining how to use `UnitfulData.`
+The [`Package Guide`](guide.md) provides a tutorial explaining how to use `UnitfulData.`
 
 ## Defined Units and Dimensions
 

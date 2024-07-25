@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+## [0.6.3] - 2024-07-25
+
 ### Features
 
 - Feat(update) update version to 0.6.3
