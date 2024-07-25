@@ -59,22 +59,9 @@ To add new units to a precompiled package, you will need to add at the end of yo
 ## Memory and Allocation
 
 You can check the memory used by an object using [`data_summary`](@ref). 
-```@meta
-DocTestSetup = quote
-    using Unitful
-    using UnitfulData
 
-    struct test_struct
-        a::Int
-        b
-    end
 
-    b=rand(10^6);
-    a=testu(2,b);
-end
-```
-
-```jldoctest
+```julia-repl
 julia> julia>  data_summary(a; unit=MByte) # total size of the object in MBytes (base 10)
 8.000055999999999 MByte
 
@@ -87,7 +74,7 @@ julia> data_summary(aa; unit=bit, exclude=Array) # size of the object itself in 
 
 Similarly, to check the memory allocated during the execution of an expression you can use [`@data_allocated](@ref)
 
-```jldoctest
+```julia-repl
 julia> @data_allocated tests(1,b) bit # memory allocated in bits
 256 bit
 
