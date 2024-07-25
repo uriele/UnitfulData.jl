@@ -2,4 +2,5 @@
 Changelog = "5217a498-cd5d-4ec6-b8c2-9b85a09b6e3e"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 DocumenterInterLinks = "d12716ef-a0f6-4df4-a9f1-a5a34e75c656"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 UnitfulData = "479269fd-87c4-43d6-a395-02aad47d928b"

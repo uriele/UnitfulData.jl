@@ -27,8 +27,7 @@ makedocs(;
         "Home" => "index.md",
         "Manual" => Any[
             "Units" => "units.md",
-            "Functions and Macros"=> "functions.md",
-            ]
+            "Functions and Macros"=> "functions.md"]
         "release-notes.md",
     ],
     plugins=[links],
