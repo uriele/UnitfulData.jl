@@ -1,7 +1,7 @@
 name = "UnitfulData"
 uuid = "479269fd-87c4-43d6-a395-02aad47d928b"
 authors = ["Marco Menarini"]
-version = "0.6.1"
+version = "0.6.3"
 
 [deps]
 Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
