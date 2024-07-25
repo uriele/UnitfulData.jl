@@ -3,6 +3,11 @@ uuid = "479269fd-87c4-43d6-a395-02aad47d928b"
 authors = ["Marco Menarini"]
 version = "0.5.0-DEV"
 
+[deps]
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+Mmap = "a63ad114-7e13-5084-954f-fe012c677804"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
 [compat]
 julia = "1.10"
 
