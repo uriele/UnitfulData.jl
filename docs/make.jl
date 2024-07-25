@@ -2,16 +2,12 @@ using UnitfulData
 using Documenter
 using DocumenterInterLinks
 
-DocMeta.setdocmeta!(UnitfulData, :DocTestSetup, :(using UnitfulData); recursive=true)
-
-linka= InterLinks(
+links= InterLinks(
     "Unitful" => "https://painterqubits.github.io/Unitful.jl/stable/",
-    "Julia" => (
-        "https://docs.julialang.org/en/v1/",
-        joinpath(@__DIR__, "inventories", "Julia.toml")
-    )
-
+    "Julia" =>     "https://docs.julialang.org/en/v1/"
 )
+
+DocMeta.setdocmeta!(UnitfulData, :DocTestSetup, :(using UnitfulData); recursive=true)
 
 
 makedocs(;
@@ -26,6 +22,7 @@ makedocs(;
     pages=[
         "Home" => "index.md",
     ],
+    plugins=[links],
 )
 
 deploydocs(;
