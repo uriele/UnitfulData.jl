@@ -2,11 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
 ## [0.6.1] - 2024-07-25
 
 ### 🚀 Features
 
-- *(release)* First release of the code
+- Feat(
 
 ### 🐛 Bug Fixes
 
@@ -17,6 +19,11 @@ All notable changes to this project will be documented in this file.
 
 - *(website)* I added a documentation webpage.
 
+## [0.6.0] - 2024-07-25
+
+## [0.6.0] - 2024-07-25
+
+## [0.5.0] - 2024-07-25
 
 ### 🐛 Bug Fixes
 
