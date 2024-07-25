@@ -99,7 +99,7 @@ the result is converted to that unit. By default, the result is in Bytes.
 
 See also [`Base.@allocations`](@extref), [`data_summary`](@ref)
 
-```jldoctest
+```julia-repl
 julia> @data_allocated rand(10^6) MByte
 8.000080 MBytes
 ```
