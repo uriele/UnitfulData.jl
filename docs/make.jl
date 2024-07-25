@@ -29,6 +29,7 @@ makedocs(;
             "Units" => "units.md",
             "Functions and Macros"=> "functions.md"],
         "release-notes.md",
+        hide("fulllist.md"),
     ],
     plugins=[links],
     warnonly = ("strict=false" in ARGS),
