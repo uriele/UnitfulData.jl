@@ -1,10 +1,8 @@
 using UnitfulData
 using Test
-using Logging
 using Base.Docs
 using UnitfulData: _log2_10, _log2_3, _log2_e
 using Unitful: 𝐓
-using Mmap: mmap
 
 include("./test_util.jl")
 test_values = Dict(

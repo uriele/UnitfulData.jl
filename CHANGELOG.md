@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Documentation
+
+- *(fix)* Add link to Package Guide on the home page
+
 ## [0.6.3] - 2024-07-25
 
 ### Features
