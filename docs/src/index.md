@@ -55,8 +55,6 @@ A derived dimension representing the unit of information passing through a chann
 - [`Unitlike`](@extref `Unitful.Unitlike`)
 - [`𝐓`](@extref `Unitful.𝐓`)
 
-    export 
-    export  
 
 ## From `UnitfulData`
 
