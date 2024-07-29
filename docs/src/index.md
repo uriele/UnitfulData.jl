@@ -47,8 +47,16 @@ A derived dimension representing the unit of information passing through a chann
 - [`@unit`](@extref `Unitful.@unit`)
 - [`dimension`](@extref `Unitful.dimension`)
 - [`uconvert`](@extref `Unitful.uconvert`)
+- [`unit`](@extref `Unitful.unit`)
 - [`ustrip`](@extref `Unitful.ustrip`)
 - [`upreferred`](@extref `Unitful.upreferred`)
+- [`s`](@extref `Unitful.s`)
+
+- [`Unitlike`](@extref `Unitful.Unitlike`)
+- [`𝐓`](@extref `Unitful.𝐓`)
+
+    export 
+    export  
 
 ## From `UnitfulData`
 

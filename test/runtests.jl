@@ -2,8 +2,6 @@ using UnitfulData
 using Test
 using Base.Docs
 using UnitfulData: _log2_10, _log2_3, _log2_e
-using Unitful: 𝐓
-
 include("./test_util.jl")
 test_values = Dict(
     :bit => 1,
@@ -81,6 +79,8 @@ val= 1234.2
         for (unit, value) in test_units
             @test value*bit == 1eval(Symbol(unit,"bit"))
             @test value*Byte == 1eval(Symbol(unit,"Byte"))
+            @test value*bps == 1eval(Symbol(unit,"bps"))
+            @test value*Bps == 1eval(Symbol(unit,"Bps"))
         end
     end
 
@@ -107,4 +107,20 @@ val= 1234.2
         end
 
     end
+
+    @testset "Exported from Unitful" begin
+        @test upreferred(1Bps) == 8bps
+        @test ustrip(1bps) == 1
+        @test uconvert(bps, 1Bps) == 8bps
+        @test uconvert(Bps, 1bps) == 1//8 * Bps
+        @test 1u"bit" == 1bit
+        @test unit(1bit) == bit
+        @test upreferred(1Kibps) == 1024*bps
+        @test isa(Kibps, Unitlike)
+        @test isa(1bit, UnitfulData.Information)
+        @test isa(1s,UnitfulData.Time)
+        @test isa(𝐓,UnitfulData.Dimensions)
+        @test isa(Data,UnitfulData.Dimensions)
+    end
+
 end

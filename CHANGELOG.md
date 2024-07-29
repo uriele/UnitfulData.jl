@@ -4,9 +4,21 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Bug Fixes
+
+- *(bug)* Exported Unitful functions correctly
+
 ### Documentation
 
 - *(fix)* Add link to Package Guide on the home page
+
+### Style
+
+- Style(show) Display units as  bits and Bytes for Information Quantities, when the absolute value is greater than 1
+
+### Tests
+
+- Test(export) Added test for exported functions
 
 ## [0.6.3] - 2024-07-25
 

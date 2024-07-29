@@ -18,4 +18,3 @@ function data_summary(ex; unit::Unitlike=Byte,
 
     return uconvert(unit,Base.summarysize(ex; exclude=exclude, chargeall=chargeall)*Byte)
 end   
-

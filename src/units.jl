@@ -157,3 +157,26 @@
     
 """
 @unit nybl "nybl" Nibbles 4*bit true true
+
+
+function Base.show(io::IO, x::Information)
+    if isunitless(unit(x))
+        showval(io, x.val, false)
+    else
+        showval(io, x.val, true)
+        has_unit_spacing(unit(x)) && print(io, ' ')
+        show(io, unit(x))
+        abs(x.val) >= 1 && print(io, 's')
+    end
+end
+
+function Base.show(io::IO, mime::MIME"text/plain", x::Information)
+    if isunitless(unit(x))
+        showval(io, mime, x.val, false)
+    else
+        showval(io, mime, x.val, true)
+        has_unit_spacing(unit(x)) && print(io, ' ')
+        show(io, mime, unit(x))
+        abs(x.val) >= 1 && print(io, 's')
+    end
+end

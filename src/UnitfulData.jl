@@ -1,17 +1,22 @@
 module UnitfulData
     import Unitful 
-    using Unitful: @u_str, @unit, @dimension, @derived_dimension,𝐓,s,uconvert,Unitlike
-    using Unitful: dimension,basefactor,unit,Unit,@refunit,@unit_symbols,abbr,basefactors_expr, FreeUnits
+    using Unitful: showval, has_unit_spacing, isunitless
+    using Unitful: @u_str, @unit, @dimension, @derived_dimension,𝐓,s,uconvert,Unitlike,ustrip,Time,𝐓,upreferred
+    using Unitful: dimension,basefactor,unit,Unit,@refunit,@unit_symbols,basefactors_expr, FreeUnits,Dimensions
     using Base: @__doc__, gc_bytes, summarysize
     import Base.Experimental
-    export @u_str, @unit, @unit_custom_prefix, prefixed_data,abbr,Unitlike
-    export Unit,@unit_symbols,s,uconvert, absoluteunit, dimension, uconvert, ustrip, upreferred
-    export Data, DataRate
+    import Base.show
+    # Exported from Unitful
+    export @u_str, @unit
+    export Unitlike, 𝐓
+    export  s, uconvert, dimension, uconvert, ustrip, unit, upreferred
+    # Exported from UnitfulData
+    export Data, DataRate,prefixed_data,@unit_custom_prefix
     export bit,   Byte,  bps,  Bps, sh, Hart, nat,dibit,tribit,nybl,trit
     export kbit,  Mbit,  Gbit,  Tbit,  Pbit,  Ebit,  Zbit,  Ybit,  Kibit,  Mibit,  Gibit,  Tibit,  Pibit,  Eibit,  Zibit,  Yibit
     export kByte, MByte, GByte, TByte, PByte, EByte, ZByte, YByte, KiByte, MiByte, GiByte, TiByte, PiByte, EiByte, ZiByte, YiByte
-    export kbps,  Mbps,  Gbps,  Tbps,  Pbps,  Ebps,  Zbps,  Ybps,  KiBps,  MiBps,  GiBps,  TiBps,  PiBps,  EiBps,  ZiBps,  YiBps
-    export kBps,  MBps,  GBps,  TBps,  PBps,  EBps,  ZBps,  YBps,  KIBps,  MIBps,  GIBps,  TIBps,  PIBps,  EIBps,  ZIBps,  YIBps
+    export kbps,  Mbps,  Gbps,  Tbps,  Pbps,  Ebps,  Zbps,  Ybps,  Kibps,  Mibps,  Gibps,  Tibps,  Pibps,  Eibps,  Zibps,  Yibps
+    export kBps,  MBps,  GBps,  TBps,  PBps,  EBps,  ZBps,  YBps,  KiBps,  MiBps,  GiBps,  TiBps,  PiBps,  EiBps,  ZiBps,  YiBps
     export @data_allocated, data_summary
     # Constants
     const _log2_10 = log2(10);
