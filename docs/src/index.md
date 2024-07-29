@@ -50,8 +50,6 @@ A derived dimension representing the unit of information passing through a chann
 - [`unit`](@extref `Unitful.unit`)
 - [`ustrip`](@extref `Unitful.ustrip`)
 - [`upreferred`](@extref `Unitful.upreferred`)
-
-- [`Unitful.s`](@extref `Unitful.s`)
 - [`Unitlike`](@extref `Unitful.Unitlike`)
 
 - `s` 
